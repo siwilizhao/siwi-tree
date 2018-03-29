@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/siwilizhao/siwi-tree.svg?branch=master)](https://travis-ci.org/siwilizhao/siwi-tree)
 [![npm](https://img.shields.io/npm/v/siwi-tree.svg)](https://www.npmjs.com/package/siwi-tree)
 [![npm](https://img.shields.io/npm/dt/siwi-tree.svg)](https://www.npmjs.com/package/siwi-tree)
-[![Github file size](https://img.shields.io/github/size/siwilizhao/siwi-tree/lib/cache.js.svg)](https://github.com/siwilizhao/siwi-tree/lib/tree.js)
+[![Github file size](https://img.shields.io/github/size/siwilizhao/siwi-tree/lib/tree.js.svg)](https://github.com/siwilizhao/siwi-tree/lib/tree.js)
 
 # siwi-tree
 无限级分类  生成菜单 
