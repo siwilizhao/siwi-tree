@@ -1,0 +1,38 @@
+{
+  "name": "siwi-tree",
+  "version": "1.0.0",
+  "description": "无限级分类  生成菜单",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siwilizhao/siwi-tree.git"
+  },
+  "keywords": [
+    "siwi-tree",
+    "tree",
+    "无限极分类",
+    "家谱树",
+    "siwi",
+    "siwilizhao"
+  ],
+  "author": "siwi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/siwilizhao/siwi-tree/issues"
+  },
+  "homepage": "https://github.com/siwilizhao/siwi-tree#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.5"
+  },
+  "engines": {
+    "node": ">= 8.9"
+  }
+}
