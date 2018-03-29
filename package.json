@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "mocha": "./node_modules/.bin/mocha -u bdd"
   },
   "repository": {
     "type": "git",
