@@ -35,21 +35,21 @@
         <th>String</th>
         <th>否</th>
         <th>id</th>
-        <th>指定id下表</th>
+        <th>指定id下标</th>
     </tr>
     <tr>
         <th>parent_index</th>
         <th>String</th>
         <th>否</th>
         <th>parent_id</th>
-        <th>指定parent_id下表</th>
+        <th>指定parent_id下标</th>
     </tr>
     <tr>
         <th>sub_index</th>
         <th>String</th>
         <th>否</th>
         <th>children</th>
-        <th>指定sub下表</th>
+        <th>指定sub下标</th>
     </tr>
 </table>
 
