@@ -6,7 +6,7 @@
 [![Github file size](https://img.shields.io/github/size/siwilizhao/siwi-tree/lib/tree.js.svg)](https://github.com/siwilizhao/siwi-tree/lib/tree.js)
 
 # siwi-tree
-无限级分类  生成菜单 
+无限级分类 家谱树 子孙树 生成菜单 
 
 # install
 
@@ -20,7 +20,7 @@
 
 # Example
 
-## set
+## 实例化参数
 
 <table>
     <tr>
@@ -53,12 +53,65 @@
     </tr>
 </table>
 
+## 默认
+> 默认情况下 数据如下
 ```js
+const data = [{
+        id: 1,
+        name: '中国',
+        parent_id: 0
+    },
+    {
+        id: 2,
+        name: '台湾',
+        parent_id: 1
+    },
+    {
+        id: 3,
+        name: '台北',
+        parent_id: 2
+    },
+    {
+        id: 4,
+        name: '钓鱼岛',
+        parent_id: 3
+    },
+    {
+        id: 5,
+        name: '日本',
+        parent_id: 0
+    },
+    {
+        id: 6,
+        name: '东京',
+        parent_id: 5
+    },
+]
 const Tree = require('siwi-tree')
-const id_index = 'id'
-const parent_index = 'pid'
-const sub_index = 'sub'
-const tree = new Tree(id_index, parent_index, sub_index)
+const tree = new Tree() // 这里不用传入参数
+
+class Example {
+    constructor() {
+        this.init()
+    }
+    async init() {
+        const familyTree = await tree.familyTree(data, 4)
+        console.log(familyTree)
+        const subTree = await tree.subTree(data, 2)
+        console.log(subTree)
+        const res = await tree.getTree(data)
+        console.log(JSON.stringify(res))
+    }
+}
+
+module.exports = new Example()
+```
+
+## 自定义下标
+> 通常情况下 树的数据源是多样的 可以通过传入 id_index  parent_index sub_index 指定数据源的对应下标
+
+
+```js
 const data = [{
         id: 1,
         name: '中国',
@@ -90,6 +143,12 @@ const data = [{
         pid: 5
     },
 ]
+const Tree = require('siwi-tree')
+const id_index = 'id'
+const parent_index = 'pid'
+const sub_index = 'sub'
+const tree = new Tree(id_index, parent_index, sub_index)
+
 class Example {
     constructor() {
         this.init()
