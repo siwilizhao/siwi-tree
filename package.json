@@ -1,6 +1,6 @@
 {
   "name": "siwi-tree",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "无限级分类  生成菜单",
   "main": "index.js",
   "directories": {
