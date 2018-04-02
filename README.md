@@ -6,7 +6,7 @@
 [![Github file size](https://img.shields.io/github/size/siwilizhao/siwi-tree/lib/tree.js.svg)](https://github.com/siwilizhao/siwi-tree/lib/tree.js)
 
 # siwi-tree
-无限级分类 家谱树 子孙树 生成菜单 
+无限级分类 家谱树 子孙树 生成菜单 提供递归和迭代两种方式实现
 
 # install
 
@@ -160,6 +160,60 @@ class Example {
         console.log(subTree)
         const res = await tree.getTree(data)
         console.log(JSON.stringify(res))
+    }
+}
+
+module.exports = new Example()
+```
+
+## 迭代方式
+
+> 目前迭代实现 家谱树 子孙树
+
+```js
+const data = [{
+        id: 1,
+        name: '中国',
+        parent_id: 0
+    },
+    {
+        id: 2,
+        name: '台湾',
+        parent_id: 1
+    },
+    {
+        id: 3,
+        name: '台北',
+        parent_id: 2
+    },
+    {
+        id: 4,
+        name: '钓鱼岛',
+        parent_id: 3
+    },
+    {
+        id: 5,
+        name: '日本',
+        parent_id: 0
+    },
+    {
+        id: 6,
+        name: '东京',
+        parent_id: 5
+    },
+]
+const Tree = require('siwi-tree')
+const tree = new Tree() // 这里不用传入参数
+
+class Example {
+    constructor() {
+        this.init()
+    }
+    async init() {
+        const familyTree = await tree.familyTreeIteration(data, 4)
+        console.log(familyTree)
+        const subTree = await tree.subTreeIteration(data, 2)
+        console.log(subTree)
     }
 }
 
